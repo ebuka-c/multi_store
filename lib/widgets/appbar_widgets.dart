@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AppbarBAckButton extends StatelessWidget {
-  const AppbarBAckButton({
+class AppbarBackButton extends StatelessWidget {
+  const AppbarBackButton({
     Key? key,
   }) : super(key: key);
 
