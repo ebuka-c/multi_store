@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:multi_store/main_screens/customer_home.dart';
 import 'package:multi_store/widgets/appbar_widgets.dart';
 
 class CartScreen extends StatefulWidget {
@@ -38,7 +39,12 @@ class _CartScreenState extends State<CartScreen> {
             borderRadius: BorderRadius.circular(25),
             child: MaterialButton(
               minWidth: MediaQuery.of(context).size.width * 0.6,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CustomerHomeScreen()));
+              },
               child: const Text(
                 'continue shopping',
                 style: TextStyle(fontSize: 18, color: Colors.white),
@@ -46,6 +52,40 @@ class _CartScreenState extends State<CartScreen> {
             ),
           )
         ]),
+      ),
+      bottomSheet: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: const [
+                Text(
+                  'Total \$ ',
+                  style: TextStyle(fontSize: 15),
+                ),
+                Text(
+                  '00.00',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red),
+                ),
+              ],
+            ),
+            Container(
+              height: 35,
+              width: MediaQuery.of(context).size.width * 0.45,
+              decoration: BoxDecoration(
+                  color: Colors.yellow,
+                  borderRadius: BorderRadius.circular(25)),
+              child: MaterialButton(
+                onPressed: () {},
+                child: const Text('CHECK OUT'),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
