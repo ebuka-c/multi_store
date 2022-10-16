@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:multi_store/main_screens/supplier_home.dart';
+import 'package:multi_store/main_screens/welcome_screen.dart';
 import 'main_screens/customer_home.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SupplierHomeScreen(),
+      home: WelcomeScreen(),
     );
   }
 }
