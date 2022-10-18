@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:multi_store/main_screens/customer_home.dart';
 import 'package:multi_store/widgets/appbar_widgets.dart';
 
+import '../widgets/yellowButton.dart';
+
 class CartScreen extends StatefulWidget {
   const CartScreen({Key? key}) : super(key: key);
 
@@ -81,30 +83,4 @@ class _CartScreenState extends State<CartScreen> {
   }
 }
 
-class YellowButton extends StatelessWidget {
-  final String label;
-  final Function() onPressed;
-  final double width;
-  const YellowButton(
-      {Key? key,
-      required this.label,
-      required this.onPressed,
-      required this.width})
-      : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 35,
-      width: MediaQuery.of(context).size.width * width,
-      decoration: BoxDecoration(
-          color: Colors.yellow, borderRadius: BorderRadius.circular(25)),
-      child: MaterialButton(
-        onPressed: onPressed,
-        child: Text(
-          label,
-        ),
-      ),
-    );
-  }
-}
