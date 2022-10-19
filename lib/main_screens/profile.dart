@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:multi_store/customerScreens/customer_orders.dart';
+import 'package:multi_store/customerScreens/wishlist.dart';
+import 'package:multi_store/main_screens/cart.dart';
+import 'package:multi_store/widgets/appbar_widgets.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -99,7 +103,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const CartScreen(
+                                            back: AppbarBackButton(),
+                                          )));
+                            },
                           ),
                         ),
                         Container(
@@ -116,7 +127,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const CustomerOrders()));
+                            },
                           ),
                         ),
                         Container(
@@ -138,7 +155,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const WishListScreen()));
+                            },
                           ),
                         ),
                       ]),
