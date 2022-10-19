@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:multi_store/main_screens/supplier_home.dart';
 import 'package:multi_store/widgets/yellowButton.dart';
 
 const textColors = [
@@ -72,7 +73,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               //   'welcome'.toUpperCase(),
               //   style: const TextStyle(color: Colors.white, fontSize: 30),
               // ),
-              SizedBox(
+              const SizedBox(
                 height: 120,
                 width: 200,
                 child: Image(image: AssetImage('asset/images/inapp/logo.png')),
@@ -137,7 +138,10 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                               AnimatedLogo(controller: _controller),
                               YellowButton(
                                   label: 'Log In',
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.pushReplacementNamed(
+                                        context, '/supplier_home');
+                                  },
                                   width: 0.25),
                               Padding(
                                 padding: const EdgeInsets.only(right: 8),
@@ -169,7 +173,12 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                           Padding(
                             padding: const EdgeInsets.only(left: 8),
                             child: YellowButton(
-                                label: 'Log In', onPressed: () {}, width: 0.25),
+                                label: 'Log In',
+                                onPressed: () {
+                                  Navigator.pushReplacementNamed(
+                                      context, '/customer_home');
+                                },
+                                width: 0.25),
                           ),
                           YellowButton(
                               label: 'Sign Up', onPressed: () {}, width: 0.25),
