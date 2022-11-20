@@ -35,7 +35,7 @@ class _SupplierHomeScreenState extends State<SupplierHomeScreen> {
         unselectedItemColor: Color.fromARGB(255, 145, 143, 143),
         currentIndex: _selectedIndex,
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.w600),
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',

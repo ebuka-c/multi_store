@@ -63,6 +63,14 @@ flutter:
     - asset/images/
     - asset/images/men/
     - asset/images/inapp/
+    - asset/images/women/
+    - asset/images/shoes/
+    - asset/images/homegarden/
+    - asset/images/kids/
+    - asset/images/electronics/
+    - asset/images/beauty/
+    - asset/images/bags/
+    - asset/images/accessories/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

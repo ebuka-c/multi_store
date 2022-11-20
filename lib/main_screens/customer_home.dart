@@ -31,10 +31,10 @@ class _CustomerHomeScreenState extends State<CustomerHomeScreen> {
         selectedItemColor: Colors.black,
         elevation: 0,
         type: BottomNavigationBarType.fixed,
-        unselectedItemColor: Color.fromARGB(255, 145, 143, 143),
+        unselectedItemColor: const Color.fromARGB(255, 145, 143, 143),
         currentIndex: _selectedIndex,
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.w600),
-        items: [
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w600),
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',

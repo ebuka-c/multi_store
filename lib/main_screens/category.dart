@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:multi_store/categories/accessories_categ.dart';
+import 'package:multi_store/categories/bags_categ.dart';
+import 'package:multi_store/categories/beauty_categ.dart';
+import 'package:multi_store/categories/electronics_categ.dart';
+import 'package:multi_store/categories/homegarden_categ.dart';
+import 'package:multi_store/categories/kids_categ.dart';
 import 'package:multi_store/categories/men_categ.dart';
-import 'package:multi_store/utilities/categ_list.dart';
+import 'package:multi_store/categories/shoes_categ.dart';
+import 'package:multi_store/categories/women_categ.dart';
 import 'package:multi_store/widgets/fakesearch.dart';
 
 List<ItemData> items = [
@@ -78,7 +83,7 @@ class _CategoryState extends State<Category> {
                 color: items[index].isSelected == true
                     ? Colors.white
                     : Colors.grey.shade300,
-                height: 100,
+                height: size.height * 0.15,
                 child: Center(child: Text(items[index].label))),
           );
         },
@@ -88,7 +93,7 @@ class _CategoryState extends State<Category> {
 
   Widget categView(Size size) {
     return Container(
-      height: size.height * 0.85,
+      height: size.height * 0.8,
       width: size.width * 0.8,
       color: Colors.white,
       child: PageView(
@@ -106,14 +111,14 @@ class _CategoryState extends State<Category> {
           scrollDirection: Axis.vertical,
           children: const [
             MenCategory(),
-            Center(child: Text('women category')),
-            Center(child: Text('shoes category')),
-            Center(child: Text('bags category')),
-            Center(child: Text('electronics category')),
-            Center(child: Text('accessories category')),
-            Center(child: Text('home & garden category')),
-            Center(child: Text('kids category')),
-            Center(child: Text('beauty category')),
+            WomenCategory(),
+            ShoesCategory(),
+            BagsCateg(),
+            ElectronicsCategory(),
+            AccessoriesCateg(),
+            HomeGarden(),
+            KidsCategory(),
+            BeautyCateg(),
           ]),
     );
   }
